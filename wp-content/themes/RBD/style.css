@@ -1,0 +1,421 @@
+/*   
+Theme Name: RBD
+Theme URI: http://www.rarebreeddigital.com
+Description: Custom RBD Theme
+Author: Joe Mortell
+Author URI: http://www.rarebreeddigital.com
+Version: 1.1
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.grid_6, .grid_3
+{
+	display:		inline-block;
+	float:			left;
+	margin:			1%;
+}
+
+.grid_6 {	width:	46%;}
+.grid_4 {	width:	31%;}
+.grid_3 {	width:	23%;}
+
+
+@media screen {
+
+/* Global Content Formatting and Styles */
+
+body
+{
+	line-height:	1.5em;
+	font-family:	"Century Gothic", Arial, sans-serif;
+	font-size:		14px;
+	font-weight: 	100;
+	color:			#666;
+	background:		url(img/background.png) repeat center center;
+	overflow-x: 	hidden;
+}
+
+
+h1, h2, h3 {color:#cc3333; padding: 5px 0;}
+h1 {font-weight: 400; font-size: 4em; margin: 0 0 .5em 0; letter-spacing: -3px; line-height: 0.9em}
+h2 {font-weight: 100; font-size: 1.7em; margin: 0 0 1em 0;}
+h3 {font-weight: 100; font-size: 1.1em; margin: 0 0 1em 0; color: #666;}
+p {margin: 0 0 .75em 0;}
+a {color: #999; text-decoration: none}
+a:hover {text-decoration: underline}
+
+::selection
+{
+	background:		#de494c;
+	color:			#FFF;
+}
+
+::-moz-selection
+{
+	background:		#de494c;
+	color:			#FFF;
+}
+
+#content-wrapper
+{
+	position:		relative;
+	background:		url(img/background.png) repeat center center;
+	width:			100%;
+}
+
+#container
+{
+	max-width:		1000px;
+	margin:			0 auto;
+	margin:			0 auto;
+	padding:		40px;
+}
+
+header
+{
+	width: 			100%;
+	top: 			0px;
+	left:			0px;
+	background:		none;
+	text-align: 	center;
+	padding:		20px;
+	position:		fixed;
+	z-index:		1000;
+}
+
+nav
+{
+	width:			70%;
+	margin:			0 auto;
+	border-bottom:	2px solid white;
+}
+
+footer
+{
+	margin:			30px auto 0 auto;
+	text-align:		center;
+	font-size: 		.85em;
+	color:			#CCC;
+}
+
+
+nav a 
+{
+	color:			white;
+	font-size:		0.8em;
+	margin:			0 18px;
+	line-height: 	3em;
+	letter-spacing:	1px;
+	text-transform:	uppercase;
+	display:		inline-block;
+	cursor:			pointer;
+}
+
+nav a:hover
+{
+	text-decoration:none;
+	color:			#CCC;
+}
+
+nav a.active
+{
+	border-bottom:	3px solid #CCC;
+}
+
+section h2
+{
+	font-weight:	bold;
+	text-align:		center;
+	font-size:		2.4em;
+	margin:			0 0 60px 0;
+}
+
+section
+{
+	margin-bottom:	150px;
+}
+
+section#work
+{
+	margin-top:		20px;
+}
+
+/*****************************************
+
+		Homepage Layout
+		
+*****************************************/
+
+#video hgroup
+{
+	position:		absolute;
+	width:			100%;
+	text-align:		center;
+	margin:			25% auto 0 auto;
+}
+
+#video hgroup h1
+{
+	font-size:		6.3em;
+	line-height:	0.9em;
+	font-weight:	bold;
+	color:			#FFF;
+	text-shadow:	0px 3px 3px #ec6969, 0px 5px 5px #660000;
+}
+
+#video hgroup h2
+{
+	font-size:		1em;
+	color:			#FFF;
+}
+
+#video_background 
+{
+	width:			100%;
+}
+
+section#video
+{
+	width:			100%;
+	position:		fixed;
+	margin-bottom:	0;
+}
+
+section#video h3
+{
+	width:			60%;
+	position:		absolute;
+	color:			white;
+	text-align:		center;
+	margin:			20px 20% 0 20%;
+	font-size:		2.8em;
+	line-height:	1em;
+	text-transform:	uppercase;
+	letter-spacing:	-1px;
+}
+
+/*****************************************
+
+		Work Layout
+		
+*****************************************/
+
+.box .info
+{
+ 	position: 		absolute;
+ 	z-index:		500;
+ 	text-align: 	center;
+ 	width:			100%;
+  	top:			45%;
+    opacity: 		0;
+  	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  	filter: alpha(opacity=0);
+  	-webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  	-moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  	-ms-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  	transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.box .info h3
+{
+  	color:			#FFF;
+  	font-size:		1.8em;
+  	text-transform:	uppercase;
+}
+
+.box .info p
+{
+	color:			#e8c7c7;
+	margin-top:		-17px;
+}
+
+.box:hover .info
+{
+    opacity: 1;
+	color:	#FFF;
+    -webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    -ms-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    margin-top:-30px;
+}
+
+.box img
+{
+	-webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+	-moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+	-ms-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+	transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.box:hover img
+{
+  	opacity: .3;
+  	-webkit-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  	-moz-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  	-ms-transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  	transition: all 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.box
+{
+  	background-color:#cc3333;
+  	overflow:		hidden;
+	box-shadow:		0px 2px 2px #CCC;
+}
+
+.box img
+{
+	width:			100%;
+}
+
+.box .mini-wrapper 
+{
+	overflow: 		hidden;
+	position: 		relative;
+	width: 			100%;
+	float: 			left;
+}
+
+/*****************************************
+
+		About Layout
+		
+*****************************************/
+
+#about .row.one, #about .row.one h2 { text-align:	left;}
+#about .row.two, #about .row.two h2 { text-align:	right;}
+
+#about .grid_6.about
+{
+	background:		url(img/letter-bg-a.png) no-repeat top right;
+}
+
+#about .grid_6.process
+{
+	background:		url(img/letter-bg-p.png) 0px 20px no-repeat;
+}
+
+
+/*****************************************
+
+		Contact Layout
+		
+*****************************************/
+
+#bottom-wrapper
+{
+	position:		absolute;
+	width:			100%;
+	left:			0;
+	background:		#cc3333;
+}
+
+#bottom-wrapper p, #bottom-wrapper h2
+{	color:			#FFF;}
+
+section#contact
+{
+	max-width:		1000px;
+	margin:			0 auto;
+}
+
+
+/*****************************************
+
+		Footer
+		
+*****************************************/
+
+footer ul
+{
+	width:			1000px;
+	margin:			10px auto;
+	text-align:		center;
+
+}
+footer ul li
+{
+	width:			20%
+	float:			left;
+	display:		inline-block;
+	margin:			0 10px;
+}
+
+
+/**** Clearfix ****/
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+} /* END screen media */
+
+@media print {
+
+.do-not-print { display: none; }
+#comments { page-break-before: always; }
+
+body { width: 100% !important; margin: 0 !important; padding: 0 !important; line-height: 1.4; word-spacing: 1.1pt; letter-spacing: 0.2pt; font-family: Garamond,"Times New Roman", serif; color: #000; background: none; font-size: 12pt; }
+h1,h2,h3,h4,h5,h6 { font-family: Helvetica, Arial, sans-serif; }
+h1 { font-size: 19pt; }
+h2 { font-size:17pt; }
+h3 { font-size:15pt; }
+h4,h5,h6 { font-size:12pt; }
+code { font: 10pt Courier, monospace; } 
+blockquote { margin: 1.3em; padding: 1em; }
+img { display: block; margin: 1em 0; }
+a img { border: none; }
+table { margin: 1px; text-align:left; }
+th { border-bottom: 1px solid #333;  font-weight: bold; }
+td { border-bottom: 1px solid #333; }
+th, td { padding: 4px 10px 4px 0; }
+caption { background: #fff; margin-bottom: 2em; text-align: left; }
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; } 
+a { text-decoration: none; color: black; }
+	
+} /* END print media */

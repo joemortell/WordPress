@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* Layout Small Screens */
+
+.grid_6, .grid_4, .grid_3
+{
+	width:			100%;
+	display:		block;
+}
+
+#video_background 
+{
+	display:		none;
+}
+
+#video hgroup
+{
+	position:		relative;
+}
+
+section#video
+{
+	background:		url(../img/video-still.jpg) no-repeat center center;
+}
+
+.box img
+{
+	width:		310px;
+	margin:			0 auto;
+}
+
+p.large-letter
+{
+	display:		none;
+}
